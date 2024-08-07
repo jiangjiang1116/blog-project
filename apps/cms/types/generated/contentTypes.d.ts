@@ -786,7 +786,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
-          preset: 'toolbarBaloon';
+          preset: 'toolbar';
         }
       >;
     cover: Attribute.Media;

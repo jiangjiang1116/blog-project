@@ -23,8 +23,6 @@ const getData: (id: string) => Promise<IArticleItemData> = async (
   id: string,
 ) => {
   const result = await fetch(addApiDomain(`/api/articles/${id}?populate=*`));
-  
-
   if (result.status !== 200) {
     return redirect('/404');
   }

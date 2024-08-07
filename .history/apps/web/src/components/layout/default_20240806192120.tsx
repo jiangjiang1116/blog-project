@@ -27,7 +27,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = ({
       </main>
       <footer className="flex-shrink-0 z-10 ">
         <div className="container flex justify-center items-center py-4 text-base">
-          一周是一年的百分之二
+          footer
         </div>
       </footer>
     </div>
