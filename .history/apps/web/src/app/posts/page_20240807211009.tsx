@@ -1,16 +1,10 @@
 import { addApiDomain } from 'web/src/lib/utils';
-import dayjs from 'dayjs';
-import 'dayjs/locale/zh-cn';
-dayjs.locale('zh-cn');
-import relativeTime from 'dayjs/plugin/relativeTime';
-import { ArticleLongItem } from 'web/src/components/ui/article-long-item';
+import { ArticleShortItem } from 'web/src/components/ui/article-short-item';
 import { Metadata } from 'next';
 import { IArticleData } from 'web/types';
-dayjs.extend(relativeTime);
-
 export const metadata: Metadata = {
-  title: '博客首页',
-  description: '博客首页',
+  title: '博客列表',
+  description: '博客列表',
 };
 const getData: () => Promise<IArticleData> = async () => {
   const result = await fetch(
@@ -25,13 +19,13 @@ const Home = async () => {
     <>
       <div className="h-20 flex justify-center items-center">
         <div className="px-24 text-[40px] bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
-          My Little BLOG
+          My First BLOG
         </div>
-        {/* 文章列表头文字 */}
+        左上角标题
       </div>
-      <div className="mt-8 grid grid-cols-1 gap-8">
-        {result.data.map((item: any) => {
-          return <ArticleLongItem key={item.id} {...item} />;
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {result.data.map((item) => {
+          return <ArticleShortItem key={item.id} {...item} />;
         })}
       </div>
     </>

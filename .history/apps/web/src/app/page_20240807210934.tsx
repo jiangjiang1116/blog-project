@@ -27,7 +27,7 @@ const Home = async () => {
         <div className="px-24 text-[40px] bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
           My Little BLOG
         </div>
-        {/* 文章列表头文字 */}
+        
       </div>
       <div className="mt-8 grid grid-cols-1 gap-8">
         {result.data.map((item: any) => {

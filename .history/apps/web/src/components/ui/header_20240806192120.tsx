@@ -18,14 +18,14 @@ const headerVariants = cva('flex w-full', {
 });
 export interface HeaderProps
   extends React.BaseHTMLAttributes<HTMLDivElement>,
-  VariantProps<typeof headerVariants> { }
+    VariantProps<typeof headerVariants> {}
 
 const Header: React.FC<HeaderProps> = ({ className, variant, ...props }) => {
   return (
     <div className={cn(headerVariants({ variant, className }))} {...props}>
       <div className="container mx-auto h-14 flex items-center justify-between">
         <div>
-          My Little <span className="text-primary dark:text-pink-300">BLOG</span>
+          My First <span className="text-primary dark:text-pink-300">BLOG</span>
         </div>
         <div className="flex text-base gap-6 items-center">
           <Link className="hover:text-primary/90" href="/">

@@ -42,6 +42,12 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "articles"
+    },
+    "createTime": {
+      "type": "date"
+    },
+    "updateTime": {
+      "type": "date"
     }
   }
 }
